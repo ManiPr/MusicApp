@@ -1,0 +1,430 @@
+.album-detail {
+    /* Your CSS styles for .album-detail here */
+  }
+  
+  .album-initiator {
+    /* Your CSS styles for .album-initiator here */
+  } 
+  .album-initiator__wrapper {
+    justify-content: space-between;
+    margin: 10rem 10rem 0 5rem;
+  }
+  
+  .album-initiator__right {
+    gap: 5rem;
+  }
+  
+  .album-initiator__content {
+    /* Your CSS styles for .album-initiator__content here */
+  }
+  
+  .album-initiator__title {
+    font-size: 2.2rem;
+    /* Your CSS styles for .album-initiator__title here */
+  }
+  
+  .album-initiator__artist {
+    font-size: 1.5rem;
+    /* Your CSS styles for .album-initiator__artist here */
+  }
+  
+  .album-initiator__stats {
+    font-size: 1.5rem;
+    gap: 1rem;
+    /* Your CSS styles for .album-initiator__stats here */
+  }
+  
+  .album-initiator__song-count {
+    font-size: 1.5rem;
+    /* Your CSS styles for .album-initiator__song-count here */
+  }
+  
+  .album-initiator__song-time {
+    font-size: 1.5rem;
+    /* Your CSS styles for .album-initiator__song-time here */
+  }
+  
+  .album-initiator__realese-date {
+    font-size: 1.5rem;
+    /* Your CSS styles for .album-initiator__realese-date here */
+  }
+  
+  .album-initiator__buttons {
+    margin-top: 2rem;
+    gap: 2rem;
+    
+  }
+  
+  .album-initiator__button {
+    background-color: var(--light-blue);
+    padding: 1 6rem;
+    border-radius: 5rem;
+    padding: .5rem 5rem;
+    cursor: pointer;
+  }
+  
+  .album-initiator__detail-button {
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .album-initiator__button-icon {
+        position: absolute;
+        top:.2rem;
+        left: -2rem;
+  }
+  .album-initiator__button-icon--play{
+    top: .3rem;
+    left: -1.5rem;
+  }
+  
+  .album-initiator__image-container {
+    /* Your CSS styles for .album-initiator__image-container here */
+  }
+  
+  .album-initiator__image {
+    /* Your CSS styles for .album-initiator__image here */
+    border-radius: 1rem;
+  }
+  
+  .album-initiator__left {
+    margin-top: -15rem;  
+}
+  
+  .album-initiator__setting {
+    width: 3rem;
+  }
+
+
+/* ********************** Table *************************** */
+
+  
+.ablum-table {
+  /* Your CSS styles for .ablum-table here */
+  margin-left: -23rem;
+}
+
+.container {
+  /* Your CSS styles for .container here */
+}
+
+.album-table__wrapper {
+  /* Your CSS styles for .album-table__wrapper here */
+  /* width: 100%; */
+  margin: 0 30rem;
+}
+
+.album-table__list {
+ 
+  /* display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%; */
+  display: flex;
+  flex-direction: column; /* تغییر جهت نمایش به عمودی (از بالا به پایین) */
+  width: 100%;
+  position: relative;
+ 
+}
+.album-table__list::after {
+  position: absolute;
+    left: 0;
+    top: 17%;
+    content: "";
+    float: left;
+    width: 110%;
+    border: 0;
+    height: 1px;
+    background: rgba(59, 200, 231, 0.61);
+    background-image: -webkit-linear-gradient(left, rgba(59, 200, 231, 0.71), #3bc8e7db, rgba(22, 26, 45, 0.8));
+
+}
+.album-table__names {
+  /* Your CSS styles for .album-table__names here */
+}
+
+.album-table__name {
+  /* Your CSS styles for .album-table__name here */
+}
+
+.album-table__datas {
+  display: flex;
+  justify-content: space-between; /* جدا کردن هر ستون */
+ position: relative;
+ transition: all .5s;
+}
+.album-table__datas:hover {
+  color: var(--light-blue);
+  transition: all .5s;
+}
+.album-table__datas:hover .album-table__number {
+opacity: 0;
+}
+.album-table__data {
+  /* Your CSS styles for .album-table__data here */
+   font-size: 1.7rem;
+   padding-top: 3rem; 
+   cursor: pointer;
+   transition: all .1s;
+}
+.album-table__number{
+
+}
+.album-table__play{
+  position: absolute;
+  width: 2.3rem;
+  z-index: 99999;
+  background-color: transparent;
+}
+/* .album-table__data:first-child {
+  margin-top: -8rem; 
+} */
+
+.album-table__setting {
+  /* Your CSS styles for .album-table__setting here */
+}
+
+.album-table__icon {
+  /* Your CSS styles for .album-table__icon here */
+} 
+
+
+.album-table__list {
+  
+}
+
+.album-table__datas {
+  
+}
+
+.ablum-table__data--duration{
+  display: inline-block;
+  width: 9%;
+  color: #2ec8e6;
+  position: relative;
+  text-transform: capitalize;
+  top: auto;
+  right: auto;
+}
+.ablum-table__data--addtofavorite{
+  display: inline-block;
+    width: 16%;
+    color: #2ec8e6;
+    position: relative;
+    text-transform: capitalize;
+    top: auto;
+    right: auto;
+}
+.ablum-table__data--song-title{
+  display: inline-block;
+  width: 16%;
+  color: #2ec8e6;
+  position: relative;
+  text-transform: capitalize;
+  top: auto;
+  right: auto;
+  margin-left: -8rem;
+}
+.ablum-table__data--more{
+  display: inline-block;
+  width: 1.5%;
+  color: #2ec8e6;
+  position: relative;
+  text-transform: capitalize;
+  top: auto;
+  right: auto;
+}
+.ablum-table__data--artist{
+  display: inline-block;
+  width: 16%;
+  color: #2ec8e6;
+  position: relative;
+  text-transform: capitalize;
+  top: auto;
+  right: auto;
+}
+.ablum-table__data--number{
+  display: inline-block;
+  width: 16%;
+  color: #2ec8e6;
+  position: relative;
+  text-transform: capitalize;
+  top: auto;
+  right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* ********************** Table *************************** */
+
+
+
+
+
+
+
+
+
+
+
+.album-comment {
+  /* Your CSS styles for .album-comment here */
+}
+
+.container {
+  /* Your CSS styles for .container here */
+}
+
+.album-comment__wrapper {
+  
+}
+
+.album-comment__top {
+  /* Your CSS styles for .album-comment__top here */
+}
+
+.album-comment__title {
+  /* Your CSS styles for .album-comment__title here */
+}
+
+.album-comment__content {
+  /* Your CSS styles for .album-comment__content here */
+  justify-content: space-around;
+  display: flex;
+
+}
+
+.album-comment__comment {
+  flex-direction: column;
+  
+}
+
+.album-comment__head {
+  /* Your CSS styles for .album-comment__head here */
+  height: 7rem;
+  gap: 6rem;
+  
+}
+
+.album-comment__image-container {
+  /* Your CSS styles for .album-comment__image-container here */
+}
+
+.album-comment__image {
+  width: 6rem;
+  border-radius: .5rem;
+}
+
+.album-comment__information {
+  /* Your CSS styles for .album-comment__information here */
+}
+
+.album-comment__title {
+  /* Your CSS styles for .album-comment__title here */
+  font-size: 1.9rem;
+}
+
+.album-comment__caption {
+  /* Your CSS styles for .album-comment__caption here */
+  font-size: 1.6rem;
+}
+
+.album-comment__text {
+    width: 86%;
+    color: #dedede;
+    line-height: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    white-space: pre-wrap;
+    max-width: 400px; 
+    word-wrap: break-word; 
+}
+
+
+
+
+
+
+
+
+/* ********************** Table *************************** */
+
+
+
+
+
+
+.album-leave-commnet {
+  /* Your CSS styles for .album-leave-commnet here */
+}
+
+.container {
+  /* Your CSS styles for .container here */
+}
+
+.album-leave-commnet__wrapper {
+  /* Your CSS styles for .album-leave-commnet__wrapper here */
+ 
+  
+}
+
+.album-leave-commnet__top {
+  /* Your CSS styles for .album-leave-commnet__top here */
+  margin-bottom: 1rem;
+}
+
+.album-leave-commnet__title {
+  /* Your CSS styles for .album-leave-commnet__title here */
+}
+
+.album-leave-commnet__content {
+  /* Your CSS styles for .album-leave-commnet__content here */
+  gap: 8rem;
+  margin: 0 10rem;
+}
+
+.album-leave-comment__user-infos {
+  /* Your CSS styles for .album-leave-comment__user-infos here */
+  flex-direction: column;
+  gap: 3rem;
+  align-items: start;
+}
+
+.album-leave-comment__user-info {
+  /* Your CSS styles for .album-leave-comment__user-info here */
+  height: 3.5rem;
+  width: 60rem;
+  border-radius: 0.5rem;
+}
+
+.album-leave-comment__comment-infos {
+  /* Your CSS styles for .album-leave-comment__comment-infos here */
+  width: 114rem;
+  height: 9rem;
+  border-radius: .5rem;
+  gap: 8rem;
+}
+
+.album-leave-comment__comment-button {
+  /* Your CSS styles for .album-leave-comment__comment-button here */
+  background-color: var(--light-blue);
+  border-radius: 2rem;
+  font-size: 1.7rem;
+  width: 25rem;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+}
+.--input{
+  outline: none;
+  border: none;
+}

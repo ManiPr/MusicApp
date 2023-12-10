@@ -1,0 +1,9 @@
+.artist-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 0 5rem;
+    margin-left: -7.2rem;
+}

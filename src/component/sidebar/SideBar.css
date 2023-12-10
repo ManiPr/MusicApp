@@ -1,0 +1,157 @@
+
+
+
+/* Sidebar Styles */
+
+.sidebar-button{
+  position: fixed;
+  top:1.5rem;
+  left: 1rem;
+  background-color: #3BC8E7;
+    width: 8rem;
+    height: 5.5rem;
+    border-radius: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99999999999999999999;
+    transition: all .5s ease;
+
+}
+.nav__btn--open{
+  top:1.5rem;
+  left: 17rem;
+}
+.sidebar-button__line{
+  display: block;
+  width: 4rem;
+  height: 0.3rem;
+  border-radius: 5rem;
+  background-color:var(--white) ;
+  position: relative;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.sidebar-button__line::after{
+  content: '';
+  width: 4rem;
+  height: 0.3rem;
+  border-radius: 5rem;
+  background-color:var(--white) ;
+  position: absolute;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  top:.9rem;
+
+}
+.sidebar-button__line::before{
+  content: '';
+  width: 4rem;
+  height: 0.3rem;
+  border-radius: 5rem;
+  background-color:var(--white) ;
+  position: absolute;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  top: -.9rem;
+}
+.sidebar {
+    position: fixed;
+    width: 9rem;
+    background-color: #1b2039;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+    width: .1rem;  
+    transition: all .1s ease;
+    overflow: hidden;
+}
+.nav-menu--open{
+  width: 23rem;
+}
+  .container {
+    /* ویژگی‌های مربوط به کانتینر درون اسایدبار */
+  }
+  
+  .sidebar__wrapper {
+    /* ویژگی‌های مربوط به ورودی‌های اسایدبار */
+    margin-top: 5rem;
+  }
+  
+  .sidebar__logos {
+    /* ویژگی‌های مربوط به لوگوهای اسایدبار */
+    margin-left: 5rem;
+  }
+  
+  .sidebar__logo {
+    /* ویژگی‌های مربوط به لوگو اسایدبار */
+  }
+  
+  .sidebar__data-wrapper {
+    /* ویژگی‌های مربوط به بخش داده‌های اسایدبار */
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .sidebar__datas {
+    /* ویژگی‌های مربوط به لیست‌های داده‌های اسایدبار */
+    margin-top: 6rem;
+  }
+  
+  .sidebar__data {
+    /* ویژگی‌های مربوط به داده‌های اسایدبار */
+    transition: all .5s ease;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: var(--main-font);
+    width: 100%;
+    cursor: pointer;
+    padding:1rem 0;
+    margin-left:3rem;
+  }
+  .sidebar__data:hover {
+   background-color: #2CC8E5;
+   border-radius: .5rem;
+   width: 44rem;
+   margin-left: -.1rem;
+  }
+  .sidebar__data:hover::after  {
+    background-color: #2CC8E5;
+   }
+  .sidebar__data::after {
+    /* ویژگی‌های مربوط به داده‌های اسایدبار */
+    position: absolute;
+    height: 2px;
+    background-color: #252b4d;
+    bottom: 0px;
+    left: 0;
+    right: 20px;
+    width: 18rem;
+    content: "";
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sidebar__link {
+    font-size: 1.5rem;
+  
+  }
+  
+  .sidebar__link-name {
+    gap: 1.5rem;
+  }
+.icon{
+  font-size: 2.5rem;
+}

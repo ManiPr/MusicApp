@@ -1,0 +1,235 @@
+.music-player{
+    margin-top: 10rem; 
+ 
+}
+.music-player__wrapper{
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../../assets/player.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+    transition: all 0.4s ease-in-out;
+}
+.music-player__wrapper::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(27, 32, 57, 0.6);
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.music-palyer__information{
+    gap: 10rem;
+    background-color: var(--light-blue);
+    border-radius: 1rem;
+    padding:1rem 2rem;
+    margin-left: -1rem;
+}
+.music-player__static{
+    gap: 2rem;
+}
+.music-player__image-container{
+
+}
+.music-player__image{
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.music-player__content{
+    margin-top: -1rem;
+}
+.music-player__name{
+    cursor: pointer;
+    font-size: 2rem;
+}
+.music-player__artist{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.music-player__dynamic{
+    display: none;
+   
+}
+.music-player__buttons{
+    cursor: pointer;
+ gap: 2rem;
+}
+.music-player__button{
+    font-size: 1.5rem;
+    gap: .4rem;
+    border-right: solid .2rem var(--white);
+    padding-right: 1.5rem;
+    height: 4rem;
+}
+.music-player__button:nth-child(4){
+        border-right: 0;
+}
+.music-player__icon{
+    margin-top: -.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.music-player__angle-icon{
+    margin-left: -4rem;
+    border: solid .2rem var(--white);
+    border-radius: 50%;
+    padding: .1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+.music-palyer__player{
+    align-items: center;
+    gap: 5rem;
+    margin-left: -40rem;
+}
+.music-player__play-setting{
+ gap: 2rem;
+}
+.music-player__setting-icon{
+    font-size: 2rem;
+}
+.music-player__previous{
+    margin-top: 1rem;
+}
+.music-player__play{
+    height: 3.3rem;
+    align-items: center;
+}
+.music-player__next{
+    margin-top: .8rem;
+}
+/*********** Progress ************/
+.music-player__container-progress{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    height: .3rem;
+    width: 70rem;
+    position: relative;
+}
+.music-player__progress{
+    width: 37.5511%;
+    background: var(--light-blue);
+    border-radius: 5px;
+    height: 100%;
+    width: 20%;
+    transition: width 0.1s linear;
+    cursor: pointer;
+    
+}
+.music-player__bullet{
+    background-color: var(--light-blue);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: -.6rem;
+    right: 56rem;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+.music-player__duration{
+    margin-top: 1rem;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.music-palyer__current{
+
+}
+.music-palyer__time-duration{
+
+}
+
+
+/*********** Setting ************/
+
+.music-player__setting{
+    gap: 5rem;
+}
+.music-player__sound{
+    position: relative;
+}
+.music-palyer__bullet-sound{
+    background-color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 99;
+    top: 4.2rem;
+    right: 3.5rem;
+}
+.circular-progress {
+    background: conic-gradient(rgb(151 151 151) 212deg, rgb(255 255 255) 136deg);
+    position: relative;
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: rgb(91 84 92);
+    border-radius: 50%;
+  }
+  .value-container {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #231c3d;
+  }
+  
+  
+.music-player__setting-buttons{
+    gap: 4rem;
+    margin-top: 1rem
+
+}
+.music-player__setting-button{
+   
+}
+.music-player__setting-button-icon{
+    text-align: center;
+    border: solid 1px;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.music-palayer__queue{
+
+}
+.music-player__queue-static{
+
+}
+.music-player__angle-icon-queue{
+
+}
+.music-player__queue-active{
+
+}
+
+
+
+

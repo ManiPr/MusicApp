@@ -1,0 +1,78 @@
+.album{
+    width: 25rem;
+}
+.album:hover .album__name {
+    color: var( --light-blue);
+    transition: all .5s;
+}
+.album:hover .album__box {
+    opacity: 1;
+}
+.album:hover .options__more-icon {
+    top: 0.4rem;
+    opacity: 1;
+}
+.album:hover .album__play-icon {
+    scale: 1;
+    opacity: 1;
+}
+.album__wrapper{
+}
+.album__container-image{
+    overflow: hidden;
+    position: relative;
+}
+.album__image{
+ border-radius: 1rem;
+ width: 25rem;
+}
+.album__information{
+
+}
+.album__name{
+    font-family: var(--bold-font);
+    cursor: pointer;
+}
+.album__artist{
+    color: var(--bold-font);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.album__content{
+
+}
+.album__box{
+    position: absolute;
+    border-radius: 1rem;
+    background-image: linear-gradient(360deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
+    transition: all 0.2s;
+    height: 70%;
+    width: 100%;
+    left: 0%;
+    top: 26.6%; 
+    opacity: 0;
+}
+
+
+
+.album__play-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+    scale: 5;
+    opacity: 0;
+    transition: all .5s;
+}
+.album__main_overlay{
+    
+}
+.album__box_overlay{
+   
+}
+.album__icon{
+    font-size: 2.1rem;
+}
+.album__icon:hover{
+
+}

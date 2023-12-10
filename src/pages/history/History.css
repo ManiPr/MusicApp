@@ -1,0 +1,6 @@
+.artists__clear{
+   cursor: pointer;
+}
+.artists__clear:hover{
+    color: var(--light-blue);
+}

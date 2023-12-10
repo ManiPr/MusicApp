@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+   
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.remove{
+    width: 20px;
+    height: 20px;
+    background-color: #2ec8e6;
+    display: inline-block;
+    line-height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    margin-left: 7rem;
+}
+.remove-image{
+    width: 1.5rem;
+}
+.one{
+    position: relative;
+    color: #2EC8E6;
+}
+.one::after{
+        position: absolute;
+            left: 0;
+            top: 100%;
+            content: "";
+            float: left;
+            width: 100%;
+            border: 0;
+            height: 1px;
+            background: rgba(59, 200, 231, 0.61);
+            background-image: -webkit-linear-gradient(left, rgba(59, 200, 231, 0.71), #3bc8e7db, rgba(22, 26, 45, 0.8))
+}
+.tr-child:hover{
+    color: #3bc8e7;
+}
+.album-table__play{
+    opacity:0;
+    transition: all .5s ease-in-out;
+    margin-left: -.5rem;
+}
+.tr-child:hover .album-table__play{
+    color: #3bc8e7;
+    opacity:1;
+}
+.tr-child:hover .number{
+    opacity:0;
+}
+.tr-child{
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}

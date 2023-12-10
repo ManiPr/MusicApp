@@ -1,0 +1,101 @@
+/* Header Styles */
+.header {
+    background-color: #1B2039;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .container {
+    /* ویژگی‌های مربوط به کانتینر داخل هدر */
+  }
+  
+  .header__wrapper {
+    justify-content: space-between;
+    height: 8rem;
+    margin: 0 10rem;
+  }
+  
+  .header__left {
+    /* ویژگی‌های مربوط به بخش چپ هدر */
+    gap: 5rem;
+  }
+  
+  .header__search-box {
+    /* ویژگی‌های مربوط به جعبه جستجو */
+    position: relative;
+  }
+  
+  .header__input {
+    /* ویژگی‌های مربوط به ورودی جستجو */
+    outline: none;
+    border: none;
+    padding:1.5rem 15rem;
+    border-radius: .5rem;
+   
+  }
+  
+  .header__icon {
+    /* ویژگی‌های مربوط به آیکون جستجو */
+    background-color: var(--light-blue);
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 45px;
+    line-height: 45px;
+    background-color: #3bc8e7;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0px 16px;
+    cursor: pointer;
+  }
+  
+  .header__icon-image {
+    /* ویژگی‌های تصویر آیکون جستجو */
+  }
+  
+  .header__trends {
+    font-size: 1.5rem;
+  }
+  
+  .header__trend {
+    /* ویژگی‌های مربوط به تگ‌های Trending Songs */
+    color: var(--light-blue);
+  }
+  .header__trend--white{
+    color: var(--white);
+  }
+  .header__right {
+    /* ویژگی‌های مربوط به بخش راست هدر */
+  }
+  
+  .header__langs {
+    /* ویژگی‌های مربوط به زبان‌ها */
+    border-right: solid 1px var(--white);
+    padding-right: 2.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .header__lang {
+    /* ویژگی‌های مربوط به تگ زبان */
+    gap: 1.5rem;
+  }
+  
+  .header__img {
+    /* ویژگی‌های تصویر زبان */
+  }
+  
+  .header__buttons {
+    /* ویژگی‌های مربوط به دکمه‌ها */
+    margin-left: 2.5rem;
+    gap: 4rem;
+    font-size: 1.8rem;
+  }
+  
+  .header__button {
+    background-color: var(--light-blue);
+    padding: .1rem 3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }

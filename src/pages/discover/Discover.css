@@ -1,0 +1,182 @@
+.discover{
+    margin-top: 10rem;
+}
+.discover__header{
+
+}
+.discover__wrapper{
+
+}
+.discover__image-container{
+
+}
+.discover__image{
+
+}
+.discover__content{
+
+}
+.discover__titles{
+    font-size: 4.5rem;
+    font-family: var(--bold-font);
+}
+.discover__title--light{
+    color: var(--light-blue);
+}
+.discover__caption{
+    margin: 15px 0px 40px;
+    color:var(--caption-color)
+}
+.discover__buttons{
+    gap: 5rem;
+}
+.discover__button{
+    font-family: var(--bold-font);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    background-color: var(--light-blue);
+    cursor: pointer;
+    transition: all 1s;
+}
+.discover__button:hover{
+    box-shadow:.1rem .1rem  3rem var(--light-blue) ;
+}
+
+/*------------------- Recently Play -------------------*/
+
+.discover__recently{
+
+}
+.recently__wrapper{
+
+}
+.recently__top{
+}
+.recently__title{
+
+}
+.recently__musics{
+   
+
+display: flex;
+justify-content: start;
+gap: 15rem
+
+}
+
+
+
+
+
+.weekly{
+    width: 56.4rem;
+}
+.weekly__wrapper{
+
+}
+.weekly__top{
+
+}
+.weekly__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    padding:0 10rem;
+}
+
+
+
+
+
+
+
+.discover__artist{
+
+}
+.artists__wrapper{
+
+}
+.artists__top{
+
+}
+.artists__title{
+
+}
+.artists__musics{
+   
+}
+
+
+
+
+
+
+.new-releases{
+}
+.new-releases__wrapper{
+
+}
+.new-releases__top{
+
+}
+.new-releases__title{
+
+}
+.new-releases__musics{
+    gap: 20rem;
+    padding: 0 12rem;
+}
+.new-releases__divider{
+    height: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(22, 26, 45, 0.27);
+    background-image: none;
+    background: rgba(37, 43, 77, 0.75);
+    position: absolute;
+    width: 89%;
+    border: 0;
+    margin-top: -8rem;
+}
+.genres__musics{
+}
+.image-wrapper{
+    display: grid;
+    grid-template-columns: repeat(6,25.5rem);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 'img1 img1 img2 img3 img3 img4' 'img1 img1 img5 img5 img6 img4';
+    gap: 1.5rem;
+    padding: 0 15rem;
+}
+.genres__image{
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img1{
+    grid-area: img1;
+}
+.img2{
+    grid-area: img2;
+
+}
+.img3{
+    grid-area: img3;
+
+}
+.img4{
+    grid-area: img4;
+
+}
+.img5{
+    grid-area: img5;
+
+}
+.img6{
+    grid-area: img6;
+
+}
+
+
+

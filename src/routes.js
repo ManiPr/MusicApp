@@ -1,0 +1,23 @@
+import Albums from "./pages/albums/Albums"
+import AlbumDetail from "./pages/album-detail/AlbumDetail"
+import Discover from "./pages/discover/Discover"
+import Artists from './pages/artists/artists'
+import ArtistDetail from './pages/artist-detail/ArtistDetail'
+import TopTrack from "./pages/top-track/TopTrack"
+import Download from './pages/download/Download'
+import History from './pages/history/History'
+import FeaturedPlayList from "./pages/featured-playlist/FeaturedPlayList"
+let routes = [
+    {path: '/albums/*', element: < Albums />},
+    {path: '/', element: < Discover />,},
+    {path: '/album/:albumId', element: < AlbumDetail />,},
+    {path: '/artist', element: < Artists />,},
+    {path: '/artist/:artistId', element: < ArtistDetail />,},
+    {path: '/toptrack', element: < TopTrack />,},
+    {path: '/favorites', element: < Download />,},
+    {path: '/history', element: < History />,},
+    {path: '/featuredplaylist', element: < FeaturedPlayList />,},
+    
+]
+
+export default routes
