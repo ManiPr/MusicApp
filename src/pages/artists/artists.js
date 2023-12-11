@@ -36,7 +36,7 @@ export default function Artists() {
         <div className='container'>
         <div className='artist-top__wrapper'>
         <div className='artists__top sectoin-top'>
-                     <h3 className='artists__title section-title1'>Featured Artists</h3>
+                     <h3 className='artists__title section-title1'>Top Artist</h3>
         </div>
        <div className='artist-data'>
         {artistList.map((artist)=>(
