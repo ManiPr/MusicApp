@@ -34,7 +34,6 @@ export default function NewReleases({musics}) {
           <div className='new-releases__main center'>
            
           <div className='new-releases__left center'>
-            <span className='new-releases__circle'></span>
             <div className='new-releases__information center'>
                 <div className='new-releases__image-container'>
                     <img src={img} className='new-releases__image' />
