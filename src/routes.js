@@ -7,6 +7,7 @@ import TopTrack from "./pages/top-track/TopTrack"
 import Download from './pages/download/Download'
 import History from './pages/history/History'
 import FeaturedPlayList from "./pages/featured-playlist/FeaturedPlayList"
+import NotFound from './pages/not-found/NotFound'
 let routes = [
     {path: '/albums/*', element: < Albums />},
     {path: '/', element: < Discover />,},
@@ -17,7 +18,7 @@ let routes = [
     {path: '/favorites', element: < Download />,},
     {path: '/history', element: < History />,},
     {path: '/featuredplaylist', element: < FeaturedPlayList />,},
-    
+    {path: '*', element: < NotFound />,},
 ]
 
 export default routes
