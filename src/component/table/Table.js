@@ -41,7 +41,7 @@ musics.AddToFavorite=!musics.AddToFavorite;
         <td>
         <img onClick={musicClick}  className='album-table__play' src={image3} />
             <span className='number'>{musics.Id}</span></td>
-        <td>{musics.Name}</td>
+        <td className='song-title'>{musics.Name}</td>
         <td>{musics.Artist}</td>
         <td>5:23</td>
         <td>

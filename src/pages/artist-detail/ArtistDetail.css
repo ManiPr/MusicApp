@@ -19,35 +19,18 @@
   }
   
   .artist-initiator__title {
-    font-size: 2.2rem;
+    font-size: 3rem;
     /* Your CSS styles for .artist-initiator__title here */
   }
-  
-  .artist-initiator__artist {
-    font-size: 1.5rem;
-    /* Your CSS styles for .artist-initiator__artist here */
+  .artist-initiator__caption{
+    color: var(--caption-color);
   }
+
   
-  .artist-initiator__stats {
-    font-size: 1.5rem;
-    gap: 1rem;
-    /* Your CSS styles for .artist-initiator__stats here */
-  }
+
   
-  .artist-initiator__song-count {
-    font-size: 1.5rem;
-    /* Your CSS styles for .artist-initiator__song-count here */
-  }
-  
-  .artist-initiator__song-time {
-    font-size: 1.5rem;
-    /* Your CSS styles for .artist-initiator__song-time here */
-  }
-  
-  .artist-initiator__realese-date {
-    font-size: 1.5rem;
-    /* Your CSS styles for .artist-initiator__realese-date here */
-  }
+ 
+
   
   .artist-initiator__buttons {
     margin-top: 2rem;
@@ -274,3 +257,9 @@ opacity: 0;
 
 
 
+.album-table__wrapper {
+  width: 80%;
+  /* margin-right: 26rem; */
+  /* margin: 0px 0rem; */
+  margin-left: 28rem;
+}
