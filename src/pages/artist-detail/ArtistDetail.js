@@ -11,6 +11,7 @@ import './ArtistDetail.css'
 import img from '../../assets/z.jpg'
 import Table from '../../component/table/Table';
 import { MusicData } from '../../data';
+
 export default function ArtistDetail() {
   const { currentMusic,setCurrentMusic, isPlaying, setIsPlaying,audioRef,currentMusicList,setCurrentMusicList } = useMusicContext();
 

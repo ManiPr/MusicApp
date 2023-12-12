@@ -10,6 +10,8 @@ export default function Table({musics,onSelect }) {
   // duration باید اضاف کنی به دیتا ها
     const { setCurrentMusic, setIsPlaying, currentMusic,isPlaying,audioRef  } = useMusicContext();
     const [isThisMusicPlaying, setIsThisMusicPlaying] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(musics.AddToFavorite); // Use state to keep track of favorite status
+
     useEffect(() => {
       setIsThisMusicPlaying(currentMusic === musics); 
     }, [currentMusic, musics]);
@@ -29,8 +31,8 @@ export default function Table({musics,onSelect }) {
      
     };
     const addToFavorite = () => {
-musics.AddToFavorite=!musics.AddToFavorite;
-     
+      setIsFavorite(!isFavorite);
+      console.log(musics.AddToFavorite);
   }
   const removeMusic=()=>{
     onSelect(musics.Id)
@@ -45,11 +47,11 @@ musics.AddToFavorite=!musics.AddToFavorite;
         <td>{musics.Artist}</td>
         <td>5:23</td>
         <td>
-  {musics.AddToFavorite === false ? (
-    <MdFavoriteBorder onClick={addToFavorite} className='options__icon' />
-  ) : (
-    <MdFavorite onClick={addToFavorite} className='options__icon' />
-  )}
+        {isFavorite ? (
+            <MdFavorite onClick={addToFavorite} className='options__icon' />
+          ) : (
+            <MdFavoriteBorder onClick={addToFavorite} className='options__icon' />
+          )}
 </td>
         <td className='remove'><img  onClick={removeMusic} className='remove-image' src={Remove1}/></td>
         </tr>
