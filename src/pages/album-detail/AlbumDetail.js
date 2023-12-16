@@ -1,26 +1,27 @@
-import {React,useState} from 'react'
+import {React,useState } from 'react'
 import './AlbumDetail.css'
 import playbutton from '../../assets/svg/play-album.svg'
 import queuebutton from '../../assets/svg/add-to-queu.svg'
-import setting from '../../assets/svg/setting.svg'
-import image from '../../assets/single_album.jpg'
 import {useParams} from 'react-router-dom'
 import {AlbumData} from '../../data'
 import { useMusicContext } from '../../context/MusicContext';
-import AlbumMusic from '../../component/album-music/AlbumMusic'
-import Option from '../../component/option/Option'
 import Comment from '../../component/comment/Comment'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import imga2 from '../../assets/user1.jpg'
-
+import {ArtistData} from '../../data'
+import img from '../../assets/z.jpg'
+import Table from '../../component/table/Table';
+import { MusicData } from '../../data';
 import 'swiper/css';
 import 'swiper/css/navigation';
 export default function AlbumDetail() {
 	const { currentMusic,setCurrentMusic, isPlaying, setIsPlaying,audioRef,currentMusicList,setCurrentMusicList } = useMusicContext();
-
-	
+	const [artists,setArtists]=useState(ArtistData)
 	let params=useParams()
+
+  const artistFind =artists.find(artist=>artist.Id==params.artistId)
+
+
 	const [albums,setAlbums]=useState(AlbumData)
 	const albumFind =albums.find(album=>album.Id==params.albumId)
 	const [name, setName] = useState('');
@@ -67,62 +68,75 @@ export default function AlbumDetail() {
   
   return (
     <>
-        <div className='album-detail'>
-            <section className='album-initiator'>
+        <div className='artist-detail'>
+            <section className='artist-initiator'>
                 <div className='container'>
-                    <div className='album-initiator__wrapper center'>
-                        <div className='album-initiator__right center'>
-                        <div className='album-initiator__image-container'>
+                    <div className='artist-initiator__wrapper center'>
+                        <div className='artist-initiator__right center'>
+                        <div className='artist-initiator__image-container'>
+                        <img src={img} className='artist-initiator__image'/>
                             </div>
-                            <div className='album-initiator__content'>
-                                <h4 className='album-initiator__title'>{albumFind.Name}</h4>
-                                <p  className='album-initiator__artist'>By - {albumFind.Artist}</p>
-                                <p className='album-initiator__stats center'><span className='album-initiator__song-count'>5 song</span>|<span className='album-initiator__song-time'>25:10</span></p>
-                                <p className='album-initiator__realese-date'>Released March 23, 2022</p>
-                                <div className='album-initiator__buttons center'>
-                                    <div onClick={playAll} className='album-initiator__button'><span  className='album-initiator__detail-button'><img src={playbutton} className='album-initiator__button-icon album-initiator__button-icon--play'/>Play All</span></div>
-                                    <div className='album-initiator__button'><span className='album-initiator__detail-button'><img src={queuebutton} className='album-initiator__button-icon'/>Add To Queue</span></div>
+                            <div className='artist-initiator__content'>
+                                <h4 className='artist-initiator__title'>dasdas</h4>
+                                <p  className='artist-initiator__caption'>one  of the greatest artist in the world just for fun she is fucking artist</p>
+                                <div className='artist-initiator__buttons center'>
+                                    <div onClick={playAll} className='artist-initiator__button'><span  className='artist-initiator__detail-button'><img src={playbutton} className='artist-initiator__button-icon artist-initiator__button-icon--play'/>Play All</span></div>
+                                    <div className='artist-initiator__button'><span className='artist-initiator__detail-button'><img src={queuebutton} className='artist-initiator__button-icon'/>Add To Queue</span></div>
                                 </div>
                             </div>
                             
                         </div>
-                        <div className='album-initiator__left'>
-						<Option></Option>
-                        </div>
                     </div>
                 </div>
             </section>
-            <section className='ablum-table'>
+            <div className='download'>
+        <section className='ablum-table'>
                 <div className='container'>
-                    <div className='album-table__wrapper'>
-                
-				<div class="album-table__list ">
-					<ul class="album-table__datas  head-data">
-						<li className='album-table__data ablum-table__data--number'>#</li>
-						<li className='album-table__data ablum-table__data--song-title'>Song Title</li>
-						<li className='album-table__data ablum-table__data--artist'>Artist</li>
-						<li className='album-table__data ablum-table__data--duration'>Duration</li>
-						<li className='album-table__data ablum-table__data--addtofavorite'>Add To Favourites</li>
-						<li className='album-table__data ablum-table__data--more'>More</li>
-					</ul>
-					{albumFind.Songs.map(album=>(
-						<AlbumMusic albums={album} ></AlbumMusic>
-					))}
-				</div>
-			</div>
+                <div className='album-table__wrapper'>
+           
+                 <table>
+        <tr class="one">
+            <th>#</th>
+             <th>Song Title</th>
+             <th>Artist</th>
+             <th>Duration</th>
+             <th>Add To Favorite</th>
+             <td>more</td>
+        </tr>
+        {MusicData.map((music)=>
+                <Table musics={music}></Table>
+        )}  
+      
+        
+                 </table>
+			    </div>
                  
                 </div>
             </section>
+        </div>
+        </div>
 			<secton className='album-comment'>
 				<div className='container'>
 					<div className='album-comment__wrapper'>
                 <div className='album-comment__top sectoin-top'>
                      <h3 className='album-comment__title section-title1'>Comments(5)</h3>
                 </div>
-                <div className='album-comment__content  '>
-					{comments.length<4?
-					(comments.map(comment=>(<Comment comments={comment}></Comment>))):<Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={3}>
-					{comments.map((comment) => (<SwiperSlide><Comment comments={comment} /></SwiperSlide>))}</Swiper>}
+                <div className='album-comment__content  section-data center'>
+          {Array.isArray(comments) && comments.length === 0 ? <p>No Comments Have Been Written</p> : 
+  comments.length < 4 ? (
+    comments.map(comment => (
+      <Comment comments={comment} />
+    ))
+  ) : (
+    <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={3}>
+      {comments.map(comment => (
+        <SwiperSlide key={comment.Id}>
+          <Comment comments={comment} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  )
+}
 					 </div>
 				</div>
                 </div>
@@ -152,7 +166,6 @@ export default function AlbumDetail() {
         
 				
 			</secton>
-        </div>
 		
     </>
   )

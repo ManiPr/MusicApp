@@ -296,9 +296,9 @@ opacity: 0;
 }
 
 .album-comment__content {
-  /* Your CSS styles for .album-comment__content here */
-  justify-content: space-around;
-  display: flex;
+ justify-content: start;
+    display: flex;
+    gap: 30rem
 
 }
 
