@@ -1,4 +1,4 @@
-import {React,useState} from 'react'
+import {React,useState } from 'react'
 import { useMusicContext } from '../../context/MusicContext';
 import {useParams} from 'react-router-dom'
 import {ArtistData} from '../../data'
@@ -11,26 +11,18 @@ import './ArtistDetail.css'
 import img from '../../assets/z.jpg'
 import Table from '../../component/table/Table';
 import { MusicData } from '../../data';
-
+// مانی استمرار حتی یک خط کد الکی در ویژال استودیو کد
 export default function ArtistDetail() {
   const { currentMusic,setCurrentMusic, isPlaying, setIsPlaying,audioRef,currentMusicList,setCurrentMusicList } = useMusicContext();
-
-	
-	let params=useParams()
+    let params=useParams()
 	const [artists,setArtists]=useState(ArtistData)
 	const artistFind =artists.find(artist=>artist.Id==params.artistId)
-  console.log(artists);
-  console.log(artistFind);
 
 	const playAll=()=>{
-		console.log(artistFind.Songs)
 		setCurrentMusicList(artistFind.Songs)
-		console.log(currentMusicList)
 	}
-	
-
-  
-  return (
+    
+    return (
     <>
          <div className='artist-detail'>
             <section className='artist-initiator'>
