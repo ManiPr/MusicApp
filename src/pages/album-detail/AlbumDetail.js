@@ -8,7 +8,6 @@ import { useMusicContext } from '../../context/MusicContext';
 import Comment from '../../component/comment/Comment'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import {ArtistData} from '../../data'
 import img from '../../assets/z.jpg'
 import Table from '../../component/table/Table';
 import { MusicData } from '../../data';
@@ -16,26 +15,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 export default function AlbumDetail() {
 	const { currentMusic,setCurrentMusic, isPlaying, setIsPlaying,audioRef,currentMusicList,setCurrentMusicList } = useMusicContext();
-	const [artists,setArtists]=useState(ArtistData)
 	let params=useParams()
-
-  const artistFind =artists.find(artist=>artist.Id==params.artistId)
-
-
-	const [albums,setAlbums]=useState(AlbumData)
+  const [albums,setAlbums]=useState(AlbumData)
 	const albumFind =albums.find(album=>album.Id==params.albumId)
 	const [name, setName] = useState('');
-  	const [email, setEmail] = useState('');
-  	const [comment, setComment] = useState('');
-  	const [comments, setComments] = useState([]);
-	console.log(comments.length);
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([]);
+
+
 	const playAll=()=>{
 		console.log(albumFind.Songs)
 		setCurrentMusicList(albumFind.Songs)
 		console.log(currentMusicList)
 	}
-	
-
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -66,6 +59,9 @@ export default function AlbumDetail() {
     setComment('');
   };
   
+
+
+
   return (
     <>
         <div className='artist-detail'>
@@ -77,8 +73,8 @@ export default function AlbumDetail() {
                         <img src={img} className='artist-initiator__image'/>
                             </div>
                             <div className='artist-initiator__content'>
-                                <h4 className='artist-initiator__title'>dasdas</h4>
-                                <p  className='artist-initiator__caption'>one  of the greatest artist in the world just for fun she is fucking artist</p>
+                                <h4 className='artist-initiator__title'>{albumFind.Name}</h4>
+                                <p  className='artist-initiator__caption'>By-{albumFind.Artist}</p>
                                 <div className='artist-initiator__buttons center'>
                                     <div onClick={playAll} className='artist-initiator__button'><span  className='artist-initiator__detail-button'><img src={playbutton} className='artist-initiator__button-icon artist-initiator__button-icon--play'/>Play All</span></div>
                                     <div className='artist-initiator__button'><span className='artist-initiator__detail-button'><img src={queuebutton} className='artist-initiator__button-icon'/>Add To Queue</span></div>
@@ -123,12 +119,12 @@ export default function AlbumDetail() {
                 </div>
                 <div className='album-comment__content  section-data center'>
           {Array.isArray(comments) && comments.length === 0 ? <p>No Comments Have Been Written</p> : 
-  comments.length < 4 ? (
+  comments.length < 5 ? (
     comments.map(comment => (
       <Comment comments={comment} />
     ))
   ) : (
-    <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={3}>
+    <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={4}>
       {comments.map(comment => (
         <SwiperSlide key={comment.Id}>
           <Comment comments={comment} />
