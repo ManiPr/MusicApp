@@ -298,9 +298,9 @@ opacity: 0;
 .album-comment__content {
  justify-content: start;
     display: flex;
-    gap: 10rem
-
-}
+    gap: 10rem;
+    margin-left:2rem;
+} 
 
 .album-comment__comment {
   flex-direction: column;
@@ -311,7 +311,7 @@ opacity: 0;
   /* Your CSS styles for .album-comment__head here */
   height: 7rem;
   gap: 6rem;
-  width: 39.5rem;
+  width: 34.5rem;
   
 }
 
