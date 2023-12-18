@@ -13,6 +13,12 @@ import MusicPlayer from '../../component/music-player/MusicPlayer'
 import { useMusicContext } from '../../context/MusicContext'; 
 import Header from '../../component/header/Header'
 import SideBar from '../../component/sidebar/SideBar'
+import image1 from '../../assets/Genres/img1.jpg'
+import image2 from '../../assets/Genres/img2.jpg'
+import image3 from '../../assets/Genres/img3.jpg'
+import image4 from '../../assets/Genres/img4.jpg'
+import image5 from '../../assets/Genres/img5.jpg'
+import image6 from '../../assets/Genres/img6.jpg'
 
 export default function Discover() {
     const [musicList, setMusicList] = useState(MusicData);
@@ -144,6 +150,55 @@ export default function Discover() {
                 </div>
                 </div>
             </section>
+            <section className='discover__category'>
+              <div className='container'>
+                  <div className='recently__wrapper '>
+                <div className='recently__top sectoin-top'>
+                     <h3 className='recently__title section-title1'>Top Genres</h3>
+                     <h6 className='recently__title section-titile2'>View More</h6>
+                </div>
+                  <div className='row'>
+                    <div className='col-lg-4'>
+                    <div class="ms_genres_box">
+                      <img class="img-fluid"  src={image1} /> 
+                    </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                <img className='category__image' src={image2}  class="img-fluid" /> 
+                                  
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img className='category__image' src={image3}  class="img-fluid" /> 
+
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ms_genres_box">
+                                    <img className='category__image' src={image5}  class="img-fluid" /> 
+                                    </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="ms_genres_box">
+                                <img className='category__image' src={image6}  class="img-fluid" />                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="ms_genres_box">
+                            <img src={image4} alt="" class="img-fluid" />
+                           
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>  
          { <MusicPlayer/> }
         
@@ -151,3 +206,11 @@ export default function Discover() {
     </>
   )
 }
+
+
+
+
+
+
+
+

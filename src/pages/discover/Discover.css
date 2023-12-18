@@ -179,4 +179,42 @@ gap: 15rem
 }
 
 
+/*-------------------     Genres   -------------------*/
+.category__galleries{
+}
+.category__gallery{
 
+}
+.gallery-1{
+}
+.gallery-2{
+
+}
+.gallery-3{
+
+}
+.gallery-4{
+
+}
+.gallery-5{
+
+}
+.gallery-6{
+
+}
+
+.category__image{
+
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.ms_genres_box img {
+    width: 100%;
+    border-radius: 10px;
+}

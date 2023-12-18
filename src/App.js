@@ -5,6 +5,8 @@ import Discover from './pages/discover/Discover';
 import { MusicProvider } from './context/MusicContext';
 import routes from './routes'
 import sideBar from './component/sidebar/SideBar'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
  export default function App() {
   let router=useRoutes(routes)
   return (
