@@ -28,7 +28,8 @@ export default function Download() {
                 </div>
            
                  <table>
-        <tr class="one">
+                  <thead>
+                  <tr class="one">
             <th>#</th>
              <th>Song Title</th>
              <th>Artist</th>
@@ -36,8 +37,12 @@ export default function Download() {
              <th>Add To Favorite</th>
              <td>Remove</td>
         </tr>
+                  </thead>
+        
         {musicList.map((music)=>
-                <Table musics={music}></Table>
+        <tbody>
+          <Table musics={music}></Table>
+        </tbody>
         )}  
       
         

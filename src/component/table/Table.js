@@ -45,6 +45,7 @@ export default function Table({musics,onSelect }) {
   }
   return (
     <>
+    
          <tr className='tr-child'>
         <td>
         <img onClick={musicClick}  className='album-table__play' src={image3} />

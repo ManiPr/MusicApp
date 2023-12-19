@@ -8,7 +8,7 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 .remove{
@@ -19,7 +19,6 @@ th, td {
     line-height: 20px;
     border-radius: 100%;
     text-align: center;
-    margin-left: 7rem;
 }
 .remove-image{
     width: 1.5rem;
@@ -46,7 +45,6 @@ th, td {
 .album-table__play{
     opacity:0;
     transition: all .5s ease-in-out;
-    margin-left: -.5rem;
 }
 .tr-child:hover .album-table__play{
     color: #3bc8e7;
