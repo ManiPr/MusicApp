@@ -111,8 +111,7 @@
 
 .album-table__wrapper {
   /* Your CSS styles for .album-table__wrapper here */
-  /* width: 100%; */
-  margin: 0 30rem;
+   width: 100%; 
 }
 
 .album-table__list {
