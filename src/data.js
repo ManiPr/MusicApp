@@ -8,7 +8,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Roll in Peace'
+        'Song':'Roll in Peace',
+        'Category':'Rock',
     },
     {
         "Id":'2',
@@ -18,7 +19,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'the remedy for a broken heart'
+        'Song':'the remedy for a broken heart',
+         'Category':'Rock',
     }, 
     {
         "Id":'3',
@@ -28,7 +30,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Revenge'
+        'Song':'Revenge',
+         'Category':'Rock',
     },
        {
         "Id":'4',
@@ -38,7 +41,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Jocelyn Flores'
+        'Song':'Jocelyn Flores',
+         'Category':'Rock',
     },
     {
         "Id":'5',
@@ -48,7 +52,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Have A Nice Day'
+        'Song':'Have A Nice Day',
+         'Category':'Rock',
     },
        {
         "Id":'6',
@@ -58,7 +63,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'GangstaZone'
+        'Song':'GangstaZone',
+         'Category':'Rock',
     },
     {
         "Id":'7',
@@ -68,7 +74,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Falling Down'
+        'Song':'Falling Down',
+         'Category':'Rock',
     },
        {
         "Id":'8',
@@ -78,7 +85,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Depression'
+        'Song':'Depression',
+         'Category':'Rock',
     },   
     {
         "Id":'9',
@@ -88,7 +96,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -98,7 +107,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -108,7 +118,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -118,7 +129,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -128,7 +140,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -138,7 +151,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     {
         "Id":'9',
@@ -148,7 +162,8 @@ let MusicData =[
         "AddToFavorite":'false',
         'Play':'false',
         'Repeat':'false',
-        'Song':'Carry On'
+        'Song':'Carry On',
+         'Category':'Rock',
     },
     
 ]
@@ -1195,5 +1210,55 @@ let ArtistData=[
         ]
     },
 ]
-
+let CategoryData=[
+    {
+        "Id":'1',
+        "Name":'Romantic',
+    },
+    {
+        "Id":'2',
+        "Name":'Classic',
+    },
+    {
+        "Id":'3',
+        "Name":'HipHop',
+    },
+    {
+        "Id":'4',
+        "Name":'Rock',
+    },
+    {
+        "Id":'5',
+        "Name":'dancing',
+    },
+    {
+        "Id":'6',
+        "Name":'EDM',
+    },
+    {
+        "Id":'7',
+        "Name":'Jazz',
+    },
+    {
+        "Id":'8',
+        "Name":'Metal',
+    },
+    {
+        "Id":'9',
+        "Name":'Pop',
+    },
+    {
+        "Id":'10',
+        "Name":'Falk',
+    },{
+        "Id":'11',
+        "Name":'Indie',
+    },{
+        "Id":'12',
+        "Name":'Soul',
+    },{
+        "Id":'13',
+        "Name":'Blues',
+    },
+]
 export {MusicData,AlbumData,ArtistData}
