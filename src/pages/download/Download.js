@@ -13,6 +13,7 @@ import MusicPlayer from '../../component/music-player/MusicPlayer';
 import Table from '../../component/table/Table'
 export default function Download() {
     const [musicList,setMusicList]=useState(MusicData)
+
     const handleMusicSelection=(musicId)=>{
         let newMusicList=musicList.filter(music=>music.id===musicId)
         console.log(newMusicList);

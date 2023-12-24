@@ -12,3 +12,6 @@ margin-right: -5rem;
     right: 25rem;
     margin-top: -3rem;
 } 
+.remove-image:hover{
+    color: var(--light-blue);
+}

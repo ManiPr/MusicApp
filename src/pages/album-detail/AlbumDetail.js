@@ -97,7 +97,7 @@ export default function AlbumDetail() {
              <th>Artist</th>
              <th>Duration</th>
              <th>Add To Favorite</th>
-             <td>more</td>
+             <td>More</td>
         </tr>
         {MusicData.map((music)=>
                 <Table musics={music}></Table>

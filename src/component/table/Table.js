@@ -11,12 +11,13 @@ import Option from '../../component/option/Option'
 export default function Table({musics,onSelect }) {
   const location = useLocation();
 
-  const isArtistRoute = location.pathname === '/artist/4';
+  const isArtistRoute = location.pathname === '/favorites';
   const isAlbumRoute = location.pathname === '/album/4';
 
     const { setCurrentMusic, setIsPlaying, currentMusic,isPlaying,audioRef  } = useMusicContext();
     const [isThisMusicPlaying, setIsThisMusicPlaying] = useState(false);
     const [isFavorite, setIsFavorite] = useState(musics.AddToFavorite); // Use state to keep track of favorite status
+    const [isRemoved, setIsRemoved] = useState(false);
 
     useEffect(() => {
       setIsThisMusicPlaying(currentMusic === musics); 
@@ -40,36 +41,41 @@ export default function Table({musics,onSelect }) {
       setIsFavorite(!isFavorite);
       console.log(musics.AddToFavorite);
   }
-  const removeMusic=()=>{
-    onSelect(musics.Id)
-  }
+  const removeMusic = () => {
+    setIsRemoved(true);
+    // در اینجا می‌توانید هر عملیات دیگری که لازم دارید برای حذف موزیک را انجام دهید
+  };
   return (
     <>
-    
-         <tr className='tr-child'>
-        <td>
-        <img onClick={musicClick}  className='album-table__play' src={image3} />
-            <span className='number'>{musics.Id}</span></td>
-        <td className='song-title'>{musics.Name}</td>
-        <td>{musics.Artist}</td>
-        <td>5:23</td>
-        <td>
-        {isFavorite ? (
-            <MdFavorite onClick={addToFavorite} className='options__icon' />
-          ) : (
-            <MdFavoriteBorder onClick={addToFavorite} className='options__icon' />
-          )}
+      {!isRemoved&&(
+  <tr className='tr-child'>
+  <td>
+  <img onClick={musicClick}  className='album-table__play' src={image3} />
+      <span className='number'>{musics.Id}</span></td>
+  <td className='song-title'>{musics.Name}</td>
+  <td>{musics.Artist}</td>
+  <td>5:23</td>
+  <td>
+  {isFavorite ? (
+      <MdFavorite onClick={addToFavorite} className='options__icon' />
+    ) : (
+      <MdFavoriteBorder onClick={addToFavorite} className='options__icon' />
+    )}
 </td>
+
 {isAlbumRoute && (
-  <td className='remove'>
-    <img onClick={removeMusic} className='remove-image' src={Remove1} />
-  </td>
+<td className='more'><Option></Option></td>
 )}
 {isArtistRoute && (
-   <td className='more'><Option></Option></td>
-   )}
-        
-        </tr>
+<td className='remove'>
+<img onClick={removeMusic} className='remove-image' src={Remove1} />
+</td>
+)}
+  
+  </tr>
+
+      )}
+       
     </>
   )
 }
