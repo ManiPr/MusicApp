@@ -10,6 +10,7 @@ import FeaturedPlayList from "./pages/featured-playlist/FeaturedPlayList"
 import NotFound from './pages/not-found/NotFound'
 import Category from "./pages/category/Category"
 import CategoryDetail from "./pages/category-detail/CategoryDetail"
+import PlayLists from "./pages/play-lists/PlayLists"
 let routes = [
     {path: '/albums/*', element: < Albums />},
     {path: '/', element: < Discover />,},
@@ -22,6 +23,7 @@ let routes = [
     {path: '/featuredplaylist', element: < FeaturedPlayList />,},
     {path: '/category', element: < Category />,},
     {path: '/categorydetail/:categoryname', element: < CategoryDetail />,},
+    {path: '/playlist', element: < PlayLists />,},
     {path: '*', element: < NotFound />,},
 ]
 

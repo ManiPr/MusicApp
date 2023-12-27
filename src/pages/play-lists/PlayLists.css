@@ -1,0 +1,121 @@
+.playlist{
+
+}
+.your-playlist{
+}
+.your-playlist__wrapper{
+    position: relative;
+
+}
+.playlist__static-playlist{
+    width: 25rem;
+    height: 25.7rem;
+    background-color: #343e69;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+.playlist__icon{
+    font-size: 5rem;
+    margin-top: -1rem;
+}
+.playlist__musics {
+    display: flex;
+    justify-content: start;
+    gap: 15rem;
+    flex-wrap: wrap;
+}
+.playlist__create-palylist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* این قسمت‌ها می‌تواند به اندازه و ظاهر دلخواه شما باشد */
+    border: 1px solid #ccc; /* حاشیه */
+    border-radius: 8px; /* شکل گرد گوشه‌ها */
+    background-color: #343E69; /* رنگ پس زمینه */
+    /* ویژگی‌های دیگر */
+    position: fixed;
+    width: 100rem;
+    top: -50%; /* برای وسط‌چین کردن از نظر عمودی */
+    left: 50%; /* برای وسط‌چین کردن از نظر افقی */
+    transform: translate(-50%, -50%); /* برای کشیدن به مرکز کامل */
+    transition: all .5s ease;
+    opacity: 1;
+    box-shadow: black 0rem 0rem 216rem;
+    height: 60rem;
+  }
+  .createplaylist__head {
+    margin-top: -23rem;
+    gap: 80rem;
+    margin-bottom: 17rem;
+    align-items: center;
+}
+.createplaylist__title{
+
+}
+.remove-image{
+    cursor: pointer;
+}
+.playlist__content{
+
+}
+.form{
+    width: 300px;
+    height: 50px;
+    position: relative;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid var(--light-blue);
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 20px;
+}
+.form label{
+ position: absolute;
+ top: 15px;
+ left: 15px;
+ text-transform: capitalize;
+ font-size: 18px;
+ transition: top .3s;
+ padding: 0 5px;
+ pointer-events: none;
+}
+.form input:focus ~ label {
+    top:-9px;
+}
+.playlist__musics{
+    z-index: -9999999;
+}
+
+.playlist__buttons{
+    gap: 18rem;
+    margin-top: 5rem 
+}
+.playlist__button {
+    background-color: var(--light-blue);
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.playlist__content {
+    display: flex;
+    gap: 10rem;
+}
+
+/* همه‌ی عناصر با pointer events none به جز createPlaylist */
+.no-pointer-events {
+    pointer-events: none;
+  }
+  
+  /* تنظیم pointer events برای createPlaylist */
+  .pointer-events {
+    pointer-events: auto;
+  }
