@@ -1,0 +1,11 @@
+.music__play-icon-fa {
+    cursor: pointer;
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+    scale: 5;
+    opacity: 0;
+    font-size: 5rem;
+    transition: all .5s;
+    font-size: 5rem;
+}

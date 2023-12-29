@@ -1261,4 +1261,88 @@ let CategoryData=[
         "Name":'Blues',
     },
 ]
-export {MusicData,AlbumData,ArtistData}
+let PlayListData=[
+    {
+        "Id":'1',
+        "Name":'album1',
+        'Image':'Music1.jpg',
+        "AddToFavorite":'false',
+        'Play':'false',
+        'Repeat':'false',
+        'Category':'Rock',
+        'Songs':[
+            {
+                "Id":'1',
+                "Name":'HEF',
+                "Artist":'Koud',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'Roll in Peace'
+            },
+            {
+                "Id":'2',
+                "Name":'LP5',
+                "Artist":'Apparat',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'the remedy for a broken heart'
+            }, 
+            {
+                "Id":'3',
+                "Name":'Numb Numb Juice',
+                "Artist":'Schoolboy Q',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'Revenge'
+            }
+        ]
+    },
+    {
+        "Id":'2',
+        "Name":'album1',
+        'Image':'Music1.jpg',
+        "AddToFavorite":'false',
+        'Play':'false',
+        'Repeat':'false',
+        'Category':'Rock',
+        'Songs':[
+            {
+                "Id":'1',
+                "Name":'HEF',
+                "Artist":'Koud',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'Roll in Peace'
+            },
+            {
+                "Id":'2',
+                "Name":'LP5',
+                "Artist":'Apparat',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'the remedy for a broken heart'
+            }, 
+            {
+                "Id":'3',
+                "Name":'Numb Numb Juice',
+                "Artist":'Schoolboy Q',
+                'Image':'Music1.jpg',
+                "AddToFavorite":'false',
+                'Play':'false',
+                'Repeat':'false',
+                'Song':'Revenge'
+            }
+        ]
+    },
+]
+export {MusicData,AlbumData,ArtistData,PlayListData,CategoryData}

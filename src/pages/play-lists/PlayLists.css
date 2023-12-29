@@ -119,3 +119,57 @@
   .pointer-events {
     pointer-events: auto;
   }
+
+
+
+
+
+
+  :root {
+    --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+    --gray: #34495e;
+    --darkgray: #2c3e50;
+  }
+  
+  select {
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    padding: 0 119px;
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    height: 5rem;
+    cursor: pointer;
+    border: solid 1px var(--light-blue);
+    border-radius: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .select {
+    position: relative;
+}
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: -.5rem;
+    right: 0;
+    padding: 1em;
+    background-color:transparent;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+
+
+  
+  .down_note {
+      display: flex;
+      justify-content: center;
+  
+  }
