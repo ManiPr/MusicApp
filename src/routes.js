@@ -11,6 +11,7 @@ import NotFound from './pages/not-found/NotFound'
 import Category from "./pages/category/Category"
 import CategoryDetail from "./pages/category-detail/CategoryDetail"
 import PlayLists from "./pages/play-lists/PlayLists"
+import PlayListDetail from './pages/playlist-detail/PlayListDetail'
 let routes = [
     {path: '/albums/*', element: < Albums />},
     {path: '/', element: < Discover />,},
@@ -24,6 +25,7 @@ let routes = [
     {path: '/category', element: < Category />,},
     {path: '/categorydetail/:categoryname', element: < CategoryDetail />,},
     {path: '/playlist', element: < PlayLists />,},
+    {path: '/playlist-detail', element: < PlayListDetail />,},
     {path: '*', element: < NotFound />,},
 ]
 

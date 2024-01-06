@@ -7,6 +7,7 @@ import image3 from '../../assets/svg/Play2.svg'
 import Remove1 from '../../assets/svg/Remove1.svg'
 import { useMusicContext } from '../../context/MusicContext';
 import Option from '../../component/option/Option'
+import image22 from '../../assets/PlayListImage2.jpg'
 
 export default function Table({musics,onSelect }) {
   const location = useLocation();
@@ -52,6 +53,8 @@ export default function Table({musics,onSelect }) {
   <td>
   <img onClick={musicClick}  className='album-table__play' src={image3} />
       <span className='number'>{musics.Id}</span></td>
+      <td className='song-title'><img src={image22} /></td>
+
   <td className='song-title'>{musics.Name}</td>
   <td>{musics.Artist}</td>
   <td>5:23</td>
