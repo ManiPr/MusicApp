@@ -33,9 +33,9 @@ export default function Header() {
                             <div className='header__button'>Login</div>
                          </div>
                        </div>
+                       </div>
                     </div>
                 </div>
-            </div>
     </>
   )
 }

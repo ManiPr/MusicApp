@@ -34,10 +34,12 @@ export default function Discover() {
             <div className='discover__header'>
                 <div className='container'>
                     <div className='discover__wrapper center'>
-                        <div className='discover__image-container'>
+                                     <div className='row align-items-center'>
+
+                        <div className='discover__image-container col-6'>
                             <img src={img} alt='' className='discover__image' />
                         </div>
-                        <div className='discover__content'>
+                        <div className='discover__content col-6'>
                             <div className='discover__titles'>
                                 <h3 className='discover__title'>This Month’s</h3>
                                 <h3 className='discover__title discover__title--light'>Record Breaking Albums !</h3>
@@ -49,6 +51,7 @@ export default function Discover() {
                                 <div className='discover__button'>Listen Now</div>
                                 <div className='discover__button'>Add To Queue</div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

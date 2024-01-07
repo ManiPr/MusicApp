@@ -8,14 +8,11 @@
     z-index: 999;
   }
   
-  .container {
-    /* ویژگی‌های مربوط به کانتینر داخل هدر */
-  }
+
   
   .header__wrapper {
     justify-content: space-between;
     height: 8rem;
-    margin: 0 10rem;
   }
   
   .header__left {

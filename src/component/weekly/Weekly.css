@@ -1,6 +1,5 @@
 .weekly-main{
     position: relative;
-    width: 53.5rem;
 }
 .weekly-main:hover .option__play-icon{
     top: .5rem;
