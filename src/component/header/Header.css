@@ -52,31 +52,39 @@
     /* ویژگی‌های تصویر آیکون جستجو */
   }
   
-  .header__trends {
+  .header__menus {
     font-size: 1.5rem;
+    gap: 5rem;
   }
   
-  .header__trend {
-    /* ویژگی‌های مربوط به تگ‌های Trending Songs */
-    color: var(--light-blue);
+  .header__menu {
+    cursor: pointer;    
+    transition: all .5 ease;
+    padding: 1rem;
   }
-  .header__trend--white{
-    color: var(--white);
+  .header__menu--active{
+    pointer-events: none;
+    background-color: #3BC8E7;
+    border-radius: 1rem;
   }
+
+
   .header__right {
     /* ویژگی‌های مربوط به بخش راست هدر */
   }
   
-  .header__langs {
+  .header__sub-menus {
     /* ویژگی‌های مربوط به زبان‌ها */
     border-right: solid 1px var(--white);
     padding-right: 2.5rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    gap: 5rem;
+    transition: all .5s ease;
+    color: var(--light-blue);
   }
   
-  .header__lang {
-    /* ویژگی‌های مربوط به تگ زبان */
-    gap: 1.5rem;
+  .header__sub-menu {
+    cursor: pointer;
   }
   
   .header__img {
