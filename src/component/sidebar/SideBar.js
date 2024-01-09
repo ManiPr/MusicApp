@@ -1,72 +1,149 @@
-import React,{useRef} from 'react'
+import React,{useRef,useState} from 'react'
 import img5 from '../../assets/open_logo.png'
 import './SideBar.css'
-import { MdAlbum } from "react-icons/md";
-import { IoAlbumsOutline } from "react-icons/io5";
-import { PiHeadphonesLight } from "react-icons/pi";
-import { GoDownload } from "react-icons/go";
-import { MdFavoriteBorder } from "react-icons/md";
-import { PiArticleNyTimesLight } from "react-icons/pi";
-import { PiPlaylistThin } from "react-icons/pi";
-import { IoHomeOutline } from "react-icons/io5";
-import { CgPlayListAdd } from "react-icons/cg";
-import { PiPlaylist } from "react-icons/pi";
-import { GiMicrophone } from "react-icons/gi";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaHeadphones } from "react-icons/fa6";
+import { FaHouse } from "react-icons/fa6";
+import { FaRecordVinyl } from "react-icons/fa6";
+import { IoAlbumsSharp } from "react-icons/io5";
+import { IoCloudUploadSharp } from "react-icons/io5";
+import { IoHeart } from "react-icons/io5";
+import { FaLayerGroup } from "react-icons/fa6";
+import { IoIosTime } from "react-icons/io";
+import { GiLoveSong } from "react-icons/gi";
+import { GoMoveToEnd } from "react-icons/go";
+import { TbArrowMoveRight } from "react-icons/tb";
+import { TbArrowMoveLeft } from "react-icons/tb";
+import logo2 from '../../assets/logo2.png';
+import logo3 from '../../assets/Full Logo.png';
+import userImage from '../../assets/single_album.jpg'
 export default function SideBar() {
-  let menuOpen = false;
+  const [menuOpen, setMenuOpen] = useState(true);
+   const userRef = useRef(null);
+  const sidebarRef = useRef(null);
 
-  const buttonRef = useRef(null);
-  const menuRef = useRef(null);
+  const clickMenu = () => {
+    setMenuOpen(!menuOpen); 
+    
+    const sidebarWidth = menuOpen ? '74px' : '250px';
+    sidebarRef.current.style.width = sidebarWidth;
+    userRef.current.style.width=menuOpen ? '7.3rem' : '25rem'
+  };
 
-  const clickMenu=()=>{
-    if (menuOpen) {
-      buttonRef.current.classList.remove("nav__btn--open")
-      menuRef.current.classList.remove("nav-menu--open")
-
-      menuOpen = false
-  } else {
-    buttonRef.current.classList.add("nav__btn--open")
-    menuRef.current.classList.add("nav-menu--open")
-    menuOpen = true
-  }
-  }
   return (
     <>
-        <div onClick={clickMenu} ref={buttonRef} className='sidebar-button'>
-            <span className='sidebar-button__line'></span>
-        </div>
-        <div ref={menuRef} className='sidebar'>
-          <div className='container'>
-            <div className='sidebar__wrapper'>
-              <div className='sidebar__logos'>
-                <div className='sidebar__logo'></div>
-                <div className='sidebar__logo open'>
-                <a className='sidebar__link '><img src={img5} className='sidebar__logo-image'></img></a>
-               
-                  </div>
-              </div>
-              <div className='sidebar__data-wrapper'>
-                <ul className='sidebar__datas'>
-                  <li className='sidebar__data'><a className='sidebar__link sidebar__link--discover'><span className='sidebar__link-name center'><IoHomeOutline className='icon' />Discover</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link sidebar__link--album'><span className='sidebar__link-name center'><MdAlbum className='icon'></MdAlbum>Albums</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link sidebar__link--artist'><span className='sidebar__link-name center'><GiMicrophone className='icon'></GiMicrophone>Artist</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link sidebar__link--genres'><span className='sidebar__link-name center'><IoAlbumsOutline className='icon'></IoAlbumsOutline>Genres</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link sidebar__link--track'><span className='sidebar__link-name center'><PiHeadphonesLight className='icon'></PiHeadphonesLight>Tracks</span></a></li>
-                </ul>
-                <ul className='sidebar__datas'>
-                  <li className='sidebar__data'><a className='sidebar__link'><span className='sidebar__link-name center'><GoDownload className='icon'></GoDownload>Downloads</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link'><span className='sidebar__link-name center'><MdFavoriteBorder className='icon'></MdFavoriteBorder>Favorites</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link'><span className='sidebar__link-name center'><PiArticleNyTimesLight className='icon'></PiArticleNyTimesLight>History</span></a></li>
-                </ul>
-                <ul className='sidebar__datas'>
-                  <li className='sidebar__data'><a className='sidebar__link'><span className='sidebar__link-name center'><PiPlaylist className='icon'></PiPlaylist>Featured PlayList</span></a></li>
-                  <li className='sidebar__data'><a className='sidebar__link'><span className='sidebar__link-name center'><CgPlayListAdd className='icon'></CgPlayListAdd>Create PlayListf</span></a></li>
-                </ul>
-              </div>
+    <div ref={sidebarRef} className='sidebar'>
+      <div className='sidebar__button'>
+      {menuOpen?<TbArrowMoveLeft onClick={clickMenu} className='sidebar__button-link'></TbArrowMoveLeft>:<TbArrowMoveRight onClick={clickMenu} className='sidebar__button-link'></TbArrowMoveRight>
+}
+
+      </div>
+        <div className='sidebar__wrapper'>
+          <div class="sidebar__logos">
+            {menuOpen?<img src={img5} className='sidebar__logo' />:<img src={logo2} className='sidebar__logo' />}
             </div>
+            <ul class="nav-list">
+        <li>
+          <a href="#">
+          <FaHouse className='sidebar__icon'></FaHouse>
+
+            <span class="link-name">Discover</span>
+          </a>
+
+      
+        </li>
+
+        <li>
+          <div class="icon-link">
+            <a href="#">
+            <FaRecordVinyl className='sidebar__icon'></FaRecordVinyl>
+              <span class="link-name">Albums</span>
+            </a>
           </div>
+
+        </li>
+
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <FaHeadphones className='sidebar__icon'></FaHeadphones>
+              <span class="link-name">Artist</span>
+            </a>
+          </div>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <IoAlbumsSharp className='sidebar__icon'></IoAlbumsSharp>
+            <span class="link-name">Genres</span>
+          </a>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <IoCloudUploadSharp className='sidebar__icon'></IoCloudUploadSharp>
+            <span class="link-name">Download</span>
+          </a>
+
+        </li>
+
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <IoHeart className='sidebar__icon'></IoHeart>
+              <span class="link-name">Favorite</span>
+            </a>
+
+          </div>
+
+        
+        </li>
+
+        <li>
+          <a href="#">
+            <FaLayerGroup className='sidebar__icon'></FaLayerGroup>
+            <span class="link-name">Playlist</span>
+          </a>
+
+       
+        </li>
+
+        <li>
+          <a href="#">
+<GiLoveSong className='sidebar__icon'></GiLoveSong>            
+<span class="link-name">Track</span>
+          </a>
+
+        
+        </li>
+        <li>
+          <a href="#">
+            <IoIosTime className='sidebar__icon'></IoIosTime>
+            <span class="link-name">History</span>
+          </a>
+
+        
+        </li>
+       </ul>
+        <div ref={userRef} className='sidebar__user center'>
+        <div className='sidebar__user-image-container'>
+            <img src={userImage} className='sidebar__user-image' />
+          </div>
+          {menuOpen&&
+           <div  className='sidebar__user-information'>
+           <h3  className='sidebar__user-name'>Mani</h3>
+           <h3  className='sidebar__user-email'>maniweeb@gmail.com</h3>
+           </div>
+          }
+         
+         
         </div>
+        </div>
+      </div>
+
     </>
   )
 }
