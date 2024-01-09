@@ -22,15 +22,15 @@ import image6 from '../../assets/Genres/img6.jpg'
 import { Link } from 'react-router-dom';
 
 export default function Discover() {
-    // const [musicList, setMusicList] = useState(MusicData);
-    // const { recentlyPlayed,setRecentlyPlayed } = useMusicContext();
-    // console.log(recentlyPlayed.length);
+     const [musicList, setMusicList] = useState(MusicData);
+     const { recentlyPlayed,setRecentlyPlayed } = useMusicContext();
+     console.log(recentlyPlayed.length);
   return (
     <>
-    {/* <Header></Header> */}
+    <Header></Header> 
     <SideBar></SideBar>
     
-          {/* <div className='discover'>
+          <div className='discover'>
             <div className='discover__header'>
                 <div className='container'>
                     <div className='discover__wrapper center'>
@@ -231,7 +231,7 @@ export default function Discover() {
               </div>
             </section>
         </div>  
-         { <MusicPlayer/> } */}
+         { <MusicPlayer/> } 
         
 
     </>
