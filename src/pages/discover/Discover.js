@@ -19,6 +19,8 @@ import image3 from '../../assets/Genres/img3.jpg'
 import image4 from '../../assets/Genres/img4.jpg'
 import image5 from '../../assets/Genres/img5.jpg'
 import image6 from '../../assets/Genres/img6.jpg'
+import Genres from '../../component/genres/Genres'
+
 import { Link } from 'react-router-dom';
 
 export default function Discover() {
@@ -56,29 +58,16 @@ export default function Discover() {
                     </div>
                 </div>
             </div>
-            <section className='discover__recently'>
+            <section className='discover__genres'>
                 <div className='container'>
-                <div className='recently__wrapper '>
+                <div className='genres__wrapper'>
                 <div className='recently__top sectoin-top'>
-                     <h3 className='recently__title section-title1'>Recently Played</h3>
+                     <h3 className='recently__title section-title1'>Top Genres</h3>
                      <h6 className='recently__title section-titile2'>View More</h6>
                 </div>
                 <div className='recently__musics section-data center'>
-                {Array.isArray(recentlyPlayed) && recentlyPlayed.length === 0 ? <p>No songs have been played</p> : 
-  recentlyPlayed.length < 6 ? (
-    recentlyPlayed.map(music => (
-      <Music musics={music} />
-    ))
-  ) : (
-    <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}>
-      {recentlyPlayed.map(music => (
-        <SwiperSlide key={music.Id}>
-          <Music musics={music} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  )
-}</div>
+               
+                </div>
                 </div>
                 </div>
             </section>
@@ -163,7 +152,7 @@ export default function Discover() {
                 </div>
                   <div className='row'>
                   <div class="col-lg-4 category__image ">
-                        <div class="ms_genres_box ">
+                        <div class="ms_genres_box img1">
                             <img src={image1} alt="" class="img-fluid"/>
                             <div class="music__boxs image1"></div>
                                                  <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
@@ -175,7 +164,7 @@ export default function Discover() {
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="ms_genres_box">
+                                <div class="ms_genres_box img2">
                                     <img src={image2} alt="" class="img-fluid"/>
                                             <div class="music__boxs"></div>
                                     <div class="music__boxs"></div>
@@ -185,16 +174,16 @@ export default function Discover() {
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div class="ms_genres_box">
+                                <div class="ms_genres_box img3">
                                     <img src={image3} alt="" class="img-fluid"/>
                                             <div class="music__boxs"></div>
-                                                                   <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
+                              <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
 
 
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div class="ms_genres_box">
+                                <div class="ms_genres_box img4">
                                     <img src={image5} alt="" class="img-fluid"/>
                                             <div class="music__boxs"></div>
                                                                    <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
@@ -204,7 +193,7 @@ export default function Discover() {
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="ms_genres_box">
+                                <div class="ms_genres_box img5">
                                     <img src={image6} alt="" class="img-fluid"/>
                                             <div class="music__boxs"></div>
                                                                    <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
@@ -215,7 +204,7 @@ export default function Discover() {
                         </div>
                     </div>
                     <div class="col-lg-2"> 
-                        <div class="ms_genres_box ">
+                        <div class="ms_genres_box img6">
                             <img src={image4} alt="" class="img-fluid"/>
                                     <div class="music__boxs image4"></div>
                                                            <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
