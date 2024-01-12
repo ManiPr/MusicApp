@@ -603,18 +603,34 @@ table th:nth-child(2),
 
 @media screen and (max-width:2100px) {
     
-    .recently__wrapper {
-        background: black;
-    }
+    
 }
 
 
-@media screen and (max-width: 1200px) {
-  
+@media all and (max-width: 1200px) {
+  .img5{
+    margin-top: .5rem;
+  }
+  .ms_genres_box {
+    position: relative;
+    margin-bottom: -3rem !important;
+    cursor: pointer;
+}
+.img3{
+    margin-top: -.6rem;
+}
+.container{
+    background-color: black;
+}
 }
 
 @media screen and (max-width: 992px) {
-   
+   .img-fluid2{
+        width: 51rem !important;
+   }
+   .category__wrapper{
+        margin:0 10rem;
+   }
 }
 
 @media screen and (max-width: 768px) {

@@ -41,7 +41,7 @@ export default function SideBar() {
       </div>
         <div className='sidebar__wrapper'>
           <div class="sidebar__logos">
-            {menuOpen?<img src={img5} className='sidebar__logo' />:<img src={logo2} className='sidebar__logo' />}
+            {menuOpen?<img src={logo2} className='sidebar__logo' />:<img src={logo2} className='sidebar__logo' />}
             </div>
             <ul class="nav-list">
         <li>

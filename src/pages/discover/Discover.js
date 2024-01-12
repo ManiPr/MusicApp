@@ -150,6 +150,7 @@ export default function Discover() {
                      <h3 className='recently__title section-title1'>Top Genres</h3>
                      <h6 className='recently__title section-titile2'>View More</h6>
                 </div>
+                <div className='category__wrapper'>
                   <div className='row'>
                   <div class="col-lg-4 category__image ">
                         <div class="ms_genres_box img1">
@@ -165,7 +166,7 @@ export default function Discover() {
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="ms_genres_box img2">
-                                    <img src={image2} alt="" class="img-fluid"/>
+                                    <img src={image2} alt="" class="img-fluid img-fluid2"/>
                                             <div class="music__boxs"></div>
                                     <div class="music__boxs"></div>
                                                            <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
@@ -194,7 +195,7 @@ export default function Discover() {
                             </div>
                             <div class="col-lg-4">
                                 <div class="ms_genres_box img5">
-                                    <img src={image6} alt="" class="img-fluid"/>
+                                    <img src={image6} alt="" class="img-fluid img-fluid2"/>
                                             <div class="music__boxs"></div>
                                                                    <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
 
@@ -205,7 +206,7 @@ export default function Discover() {
                     </div>
                     <div class="col-lg-2"> 
                         <div class="ms_genres_box img6">
-                            <img src={image4} alt="" class="img-fluid"/>
+                            <img src={image4} alt="" class="img-fluid img-fluid2"/>
                                     <div class="music__boxs image4"></div>
                                                            <Link to="/categorydetail/Rock" className='category__name'>Rock</Link>
 
@@ -215,6 +216,7 @@ export default function Discover() {
                         </div>
                     </div>
         
+                  </div>
                   </div>
                 </div>
               </div>
