@@ -36,28 +36,34 @@ export default function Discover() {
             <div className='discover__header'>
                 <div className='container'>
                     <div className='discover__wrapper center'>
-                                     <div className='row align-items-center'>
+                            <div className='row align-items-center'>
 
                         <div className='discover__image-container col-6'>
                             <img src={img} alt='' className='discover__image' />
                         </div>
                         <div className='discover__content col-6'>
-                            <div className='discover__titles'>
-                                <h3 className='discover__title'>This Month’s</h3>
-                                <h3 className='discover__title discover__title--light'>Record Breaking Albums !</h3>
-                            </div>
-                            <p className='discover__caption'>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, One More Of A Stranger, Endless<br />
-                            Things, The Heartbeat Stops, Walking Promises, Desired Games and many more...
-                            </p>
-                            <div className='discover__buttons center'>
-                                <div className='discover__button'>Listen Now</div>
-                                <div className='discover__button'>Add To Queue</div>
-                            </div>
+                           <div className='discover__playlist'>
+                                <ul className='discover__playlist-lists center'>
+                                <li className='discover__playlist-lists'>Today Top Picks</li>
+                                <li className='discover__playlist-lists'>Trending Songs</li>
+                                <li className='discover__playlist-lists'>New Releases</li>
+                                </ul> 
+
+                           </div>
                         </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
             <section className='discover__genres'>
                 <div className='container'>
                 <div className='genres__wrapper'>
