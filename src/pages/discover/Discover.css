@@ -5,7 +5,7 @@
 
 }
 .discover__wrapper{
-
+    justify-content: space-between;
 }
 .discover__image-container{
 
@@ -14,6 +14,8 @@
 
 }
 .discover__content{
+    width: 95%;
+    margin-left: 20rem;
 }
 .discover__titles{
     font-size: 4.5rem;
@@ -189,4 +191,53 @@ gap: 15rem
 }
 .category__wrapper{
    
+}
+.discover__content:hover .discover__playlist-lists::-webkit-scrollbar {
+    width: 3px; 
+}
+.discover__playlist-lists {
+    max-height: 50rem; /* Adjust the height as needed */
+    overflow-y: auto;
+  
+    /* Customize scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #2196F3 #E3F2FD; /* Change the colors as needed */
+  }
+
+  
+  .discover__playlist-lists::-webkit-scrollbar {
+    width: 1px; 
+}
+  
+  .discover__playlist-lists::-webkit-scrollbar-thumb {
+    background-color: #2196F3; 
+  }
+  
+  .discover__playlist-lists::-webkit-scrollbar-track {
+    background-color: #E3F2FD; 
+  }
+
+  .firstMusicItem{
+   margin-top: 1rem; 
+  }
+  .discover__playlist-titles{
+    position: relative;
+    gap: 5rem;
+    margin-bottom: 1rem;
+  }
+  .discover__playlist-titles::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #30455f;
+    background-image: linear-gradient(90deg, rgb(48 69 95) 40%, rgb(12 25 41) 100%);
+  }
+  .discover__playlist-title{
+        cursor: pointer;
+  }
+  .discover__playlist-title:hover{
+    cursor: pointer;
 }

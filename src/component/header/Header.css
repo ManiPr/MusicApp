@@ -104,3 +104,10 @@
     border-radius: 2rem;
     cursor: pointer;
   }
+  .discover__title{
+    font-size: 5rem;
+    color: var(--light-blue);
+    font-family: 'sahel';
+    text-align: center;
+    width: 70rem;
+  }

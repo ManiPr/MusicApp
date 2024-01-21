@@ -52,7 +52,10 @@ export default function Table({musics,onSelect }) {
   <tr className='tr-child'>
   <td>
   <img onClick={musicClick}  className='album-table__play' src={image3} />
-      <span className='number'>{musics.Id}</span></td>
+      <span className='number'>{musics.Id}</span>
+      
+      
+    </td>
       <td className='song-title'><img src={image22} /></td>
 
   <td className='song-title'>{musics.Name}</td>

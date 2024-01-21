@@ -20,7 +20,7 @@ import image4 from '../../assets/Genres/img4.jpg'
 import image5 from '../../assets/Genres/img5.jpg'
 import image6 from '../../assets/Genres/img6.jpg'
 import Genres from '../../component/genres/Genres'
-
+import PlaylistDiscover from '../../component/playlist-discover/PlaylistDiscover'
 import { Link } from 'react-router-dom';
 
 export default function Discover() {
@@ -36,22 +36,22 @@ export default function Discover() {
             <div className='discover__header'>
                 <div className='container'>
                     <div className='discover__wrapper center'>
-                            <div className='row align-items-center'>
-
-                        <div className='discover__image-container col-6'>
+                         <div className='discover__image-container'>
                             <img src={img} alt='' className='discover__image' />
                         </div>
-                        <div className='discover__content col-6'>
+                        <div className='discover__content'>
                            <div className='discover__playlist'>
-                                <ul className='discover__playlist-lists center'>
-                                <li className='discover__playlist-lists'>Today Top Picks</li>
-                                <li className='discover__playlist-lists'>Trending Songs</li>
-                                <li className='discover__playlist-lists'>New Releases</li>
+                                <ul className='discover__playlist-titles center'>
+                                <li className='discover__playlist-title'>Trending Songs</li>
                                 </ul> 
-
+                                <div className='discover__playlist-lists'>
+                                    {musicList.map((music,index) =>(
+                                        <PlaylistDiscover index={index} musics={music}></PlaylistDiscover>
+                                    ))}
+                                </div>
                            </div>
                         </div>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
