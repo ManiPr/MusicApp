@@ -198,7 +198,7 @@ gap: 15rem
 .discover__playlist-lists {
     max-height: 50rem; /* Adjust the height as needed */
     overflow-y: auto;
-  
+    overflow-x: hidden;
     /* Customize scrollbar */
     scrollbar-width: thin;
     scrollbar-color: #2196F3 #E3F2FD; /* Change the colors as needed */
