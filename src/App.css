@@ -225,6 +225,7 @@ table th:nth-child(2),
     margin-right: auto;
     margin-left: auto;
     position: relative;
+    background-color: brown;
 }
 
 
@@ -652,12 +653,27 @@ table th:nth-child(2),
 
 
 /* Responsive */
-
+@media screen and (max-width:1700px) {
+    
+    .weekly__name{
+        width: 23rem !important;
+    }
+}
 
 @media screen and (max-width:1400px) {
     
     .discover__content{
         margin-left: -10rem !important;
+    }
+    .weekly__number {
+        width: 1 !important;
+        font-size: 5rem !important;
+    }
+    .weekly__name{
+        width: 16rem !important;
+    }
+    .weekly__caption {
+        width: 15rem !important;  
     }
 }
 
@@ -673,8 +689,23 @@ table th:nth-child(2),
 .img3{
     margin-top: -.6rem;
 }
-.container{
-    background-color: black;
+.weekly__left{
+    gap: 2rem !important;
+}
+.weekly__right{
+    width: 0;
+}
+.weekly__content{
+    display: flex !important;
+    grid-gap: 5rem;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.weekly__right{
+    margin-left: 60rem;
+}
+.weekly__line {
+    width: 101% !important;
 }
 }
 
@@ -688,13 +719,18 @@ table th:nth-child(2),
    .discover__image{
     display: none;
    }
+   .weekly__right{
+    margin-left: 37rem !important;
+}
 }
 
 @media screen and (max-width: 768px) {
     .playlist-discover__right{
         gap: 1rem !important;
     }
-  
+    .weekly__right{
+        margin-left: 17rem !important;
+    }
 }
 @media screen and (max-width: 616px) {
     .sidebar{
@@ -713,18 +749,27 @@ table th:nth-child(2),
     .playlist-discover__image{
         display: none;
     }
+    .weekly__right{
+        margin-left: 8.5rem !important;
+    }
    
 }
 @media screen and (max-width: 460px) {
-   
+    .weekly__right{
+        margin-left: 3rem !important;
+    }
 }
 
 @media screen and (max-width: 410px) {
-   
+    .weekly__right{
+        margin-left: -5rem !important;
+    }
 }
 
 @media screen and (max-width: 350px) {
-
+    .weekly__right{
+        margin-left: -6rem !important;
+    }
 }
 
 
