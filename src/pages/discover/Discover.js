@@ -22,7 +22,7 @@ import image6 from '../../assets/Genres/img6.jpg'
 import Genres from '../../component/genres/Genres'
 import PlaylistDiscover from '../../component/playlist-discover/PlaylistDiscover'
 import { Link } from 'react-router-dom';
-
+import ArtistComponent from '../../component/artist-component/ArtistComponent'
 export default function Discover() {
      const [musicList, setMusicList] = useState(MusicData);
      const { recentlyPlayed,setRecentlyPlayed } = useMusicContext();
@@ -99,10 +99,37 @@ export default function Discover() {
                      <h3 className='artists__title section-title1'>Featured Artists</h3>
                 </div>
                 <div className='artists__musics section-data center'>
-                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}>
+                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}
+                     breakpoints={{
+                        1700: {
+                          slidesPerView: 5,
+                        },
+                        1400: {
+                          slidesPerView: 4,
+                        },
+                        1200: {
+                          slidesPerView: 3,
+                        },
+                        992: {
+                          slidesPerView: 3,
+                        },
+                        768: {
+                          slidesPerView: 2,
+                        },
+                        576: {
+                          slidesPerView: 1,
+                        },
+                        350: {
+                          slidesPerView: 1,
+                        },
+                        240: {
+                          slidesPerView: 1,
+                        },
+                      }}
+                >
               {musicList.map((music) => (
             <SwiperSlide key={music.Id}>
-            <Music musics={music} />
+            <ArtistComponent artists={music} />
             </SwiperSlide>
             ))}
             </Swiper> 

@@ -1,56 +1,48 @@
-.music{
+.artists{
     width: 25rem;
 }
-.music:hover .music__name {
+.artists:hover .artists__name {
     color: var( --light-blue);
     transition: all .5s;
 }
-.music:hover .music__box {
+.artists:hover .artists__box {
     opacity: 1;
 }
-.music:hover .options__more-icon {
+.artists:hover .options__more-icon {
     top: 0.4rem;
     opacity: 1;
 }
-.music:hover .music__play-icon {
+.artists:hover .artists__play-icon {
     scale: 1;
     opacity: 1;
 }
-.music__wrapper{
+.artists__wrapper{
 }
-.music__container-image{
+.artists__container-image{
     overflow: hidden;
     position: relative;
 }
-.music__image{
- border-radius: 1rem;
+.artists__image{
+ border-radius: 50rem;
  width: 25rem;
 }
-.music__information{
+.artists__information{
+    text-align: center;
 
 }
-.music__name{
+.artists__name{
     font-family: var(--bold-font);
     cursor: pointer;
+    color: white;
 }
-.music__content{
+.artists__content{
 
-}
-.music__box{
-    position: absolute;
-    border-radius: 1rem;
-    background-image: linear-gradient(360deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
-    transition: all 0.2s;
-    height: 70%;
-    width: 100%;
-    left: 0%;
-    top: 26.6%; 
-    opacity: 0;
 }
 
 
 
-.music__play-icon {
+
+.artists__play-icon {
     cursor: pointer;
     position: absolute;
     top: 10rem;
@@ -59,15 +51,26 @@
     opacity: 0;
     transition: all .5s;
 }
-.music__main_overlay{
+.artists__main_overlay{
     
 }
-.music__box_overlay{
+.artists__box_overlay{
    
 }
-.music__icon{
+.artists__icon{
     font-size: 2.1rem;
 }
-.music__icon:hover{
+.artists__icon:hover{
 
+}
+.artists__box {
+    position: absolute;
+    border-radius: 39rem;
+    background-image: linear-gradient(360deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
+    transition: all 0.2s;
+    height: 94%;
+    width: 100%;
+    left: 0%;
+    top: 1.6%;
+    opacity: 0;
 }

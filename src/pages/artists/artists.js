@@ -21,7 +21,34 @@ export default function Artists() {
                      <h3 className='artists__title section-title1'>Featured Artists</h3>
                 </div>
                 <div className='artists__musics section-data center'>
-                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}>
+                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}
+                breakpoints={{
+                  1700: {
+                    slidesPerView: 5,
+                  },
+                  1400: {
+                    slidesPerView: 4,
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  576: {
+                    slidesPerView: 1,
+                  },
+                  350: {
+                    slidesPerView: 1,
+                  },
+                  240: {
+                    slidesPerView: 1,
+                  },
+                }}
+                >
               {artistList.map((artist) => (
             <SwiperSlide key={artist.Id}>
             <ArtistComponent artists={artist} />
