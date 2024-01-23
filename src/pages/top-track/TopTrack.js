@@ -39,7 +39,34 @@ export default function TopTrack() {
                      <h6 className='recently__title section-titile2'>View More</h6>
                 </div>
                 <div className='recently__musics section-data  center'>
-                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}>
+                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}
+                  breakpoints={{
+                    1700: {
+                      slidesPerView: 5,
+                    },
+                    1400: {
+                      slidesPerView: 4,
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                    },
+                    992: {
+                      slidesPerView: 3,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    576: {
+                      slidesPerView: 1,
+                    },
+                    350: {
+                      slidesPerView: 1,
+                    },
+                    240: {
+                      slidesPerView: 1,
+                    },
+                  }}
+                >
               {musicData.map((music) => (
             <SwiperSlide key={music.Id}>
             <Music musics={music} />
