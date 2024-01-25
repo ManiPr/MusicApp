@@ -56,27 +56,24 @@ export default function Table({musics,onSelect }) {
       
       
     </td>
-      <td className='song-title'><img src={image22} /></td>
+    <td style={{ width: '30%' }} className='song-title'>
+          {musics.Name}
+        </td>
 
-  <td className='song-title'>{musics.Name}</td>
-  <td>{musics.Artist}</td>
-  <td>5:23</td>
-  <td>
-  {isFavorite ? (
-      <MdFavorite onClick={addToFavorite} className='options__icon' />
-    ) : (
-      <MdFavoriteBorder onClick={addToFavorite} className='options__icon' />
-    )}
-</td>
+        <td style={{ width: '20%' }}>{musics.Artist}</td>
+        <td style={{ width: '20%' }}>5:23</td>
 
-{isAlbumRoute && (
-<td className='more'><Option></Option></td>
-)}
-{isArtistRoute && (
-<td className='remove'>
-<img onClick={removeMusic} className='remove-image' src={Remove1} />
-</td>
-)}
+        {isAlbumRoute && (
+          <td style={{ width: '20%' }} className='more'>
+            <Option></Option>
+          </td>
+        )}
+        {isArtistRoute && (
+          <td style={{ width: '20%' }} className='remove'>
+            <img onClick={removeMusic} className='remove-image' src={Remove1} />
+          </td>
+        )}
+
   
   </tr>
 

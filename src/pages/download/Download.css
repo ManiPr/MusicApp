@@ -37,6 +37,7 @@ th, td {
 .album-table__play{
     opacity:0;
     transition: all .5s ease-in-out;
+    margin-left: -.5rem;
 }
 .tr-child:hover .album-table__play{
     color: #3bc8e7;

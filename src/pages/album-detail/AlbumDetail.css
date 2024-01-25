@@ -102,7 +102,6 @@
   
 .ablum-table {
   /* Your CSS styles for .ablum-table here */
-  margin-left: -23rem;
 }
 
 .container {
@@ -110,8 +109,8 @@
 }
 
 .album-table__wrapper {
-  /* Your CSS styles for .album-table__wrapper here */
-   width: 100%; 
+  width: 90%;
+  margin: 0 10rem;
 }
 
 .album-table__list {
@@ -170,9 +169,9 @@ opacity: 0;
 .album-table__number{
 
 }
-.album-table__play{
+.album-table__play {
   position: absolute;
-  width: 2.3rem;
+  width: 2.5rem;
   z-index: 99999;
   background-color: transparent;
 }

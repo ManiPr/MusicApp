@@ -146,7 +146,32 @@ export default function Discover() {
                 </div>
                 <div className='new-releases__musics center'>
                 <div className='new-releases__divider'></div>
-                        <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}>
+                        <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}   breakpoints={{
+                  1700: {
+                    slidesPerView: 5,
+                  },
+                  1400: {
+                    slidesPerView: 4,
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  576: {
+                    slidesPerView: 1,
+                  },
+                  350: {
+                    slidesPerView: 1,
+                  },
+                  240: {
+                    slidesPerView: 1,
+                  },
+                }}>
               {musicList.map((music) => (
             <SwiperSlide key={music.Id}>
             <NewReleases musics={music} />
@@ -165,7 +190,7 @@ export default function Discover() {
                      <h6 className='recently__title section-titile2'>View More</h6>
                 </div>
                 <div className='recently__musics section-data  center'>
-                <Swiper navigation={true} modules={[Navigation]} className='mySwiper' slidesPerView={5}
+                <Swiper navigation={true} modules={[Navigation]} className='mySwiper'    spaceBetween={50}  slidesPerView={5}
                  breakpoints={{
                   1700: {
                     slidesPerView: 5,

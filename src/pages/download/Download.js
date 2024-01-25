@@ -35,7 +35,6 @@ export default function Download() {
              <th>Song Title</th>
              <th>Artist</th>
              <th>Duration</th>
-             <th>Add To Favorite</th>
              <td>Remove</td>
         </tr>
                   </thead>
