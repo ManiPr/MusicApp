@@ -20,7 +20,7 @@ export default function Header() {
               
 
             </div>
-            <h1 className='discover__title'>Music Web Application</h1>
+            <h1 className='discover__title'>Melodista</h1>
             <div className='header__right center'>
               <div className='header__buttons center'>
                 <div className='header__button'>Register</div>

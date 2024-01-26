@@ -17,7 +17,7 @@ export default function History() {
                      <h3 className='artists__clear '>Clear All</h3>
         </div>
        <div className='artist-data'>
-        {recentlyPlayed&&recentlyPlayed.map((music)=>(
+        {musicList.map((music)=>(
             <Music musics={music}></Music>
         ))}
        </div>
