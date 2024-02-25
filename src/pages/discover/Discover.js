@@ -23,6 +23,7 @@ import Genres from '../../component/genres/Genres'
 import PlaylistDiscover from '../../component/playlist-discover/PlaylistDiscover'
 import { Link } from 'react-router-dom';
 import ArtistComponent from '../../component/artist-component/ArtistComponent'
+import Footer from '../../component/footer/Footer'
 export default function Discover() {
      const [musicList, setMusicList] = useState(MusicData);
      const { recentlyPlayed,setRecentlyPlayed } = useMusicContext();
@@ -64,15 +65,48 @@ export default function Discover() {
 
 
 
-            <section className='discover__genres'>
+            <section className='discover__recently'>
                 <div className='container'>
-                <div className='genres__wrapper'>
+                <div className='recently__wrapper '>
                 <div className='recently__top sectoin-top'>
-                     <h3 className='recently__title section-title1'>Top Genres</h3>
+                     <h3 className='recently__title section-title1'> Featured Albums</h3>
                      <h6 className='recently__title section-titile2'>View More</h6>
                 </div>
-                <div className='recently__musics section-data center'>
-               
+                <div className='recently__musics section-data  center'>
+                <Swiper navigation={true} modules={[Navigation]} className='mySwiper'    spaceBetween={50}  slidesPerView={5}
+                 breakpoints={{
+                  1700: {
+                    slidesPerView: 5,
+                  },
+                  1400: {
+                    slidesPerView: 4,
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  576: {
+                    slidesPerView: 1,
+                  },
+                  350: {
+                    slidesPerView: 1,
+                  },
+                  240: {
+                    slidesPerView: 1,
+                  },
+                }}
+                >
+              {musicList.map((music) => (
+            <SwiperSlide key={music.Id}>
+            <Music musics={music} />
+            </SwiperSlide>
+            ))}
+            </Swiper> 
                 </div>
                 </div>
                 </div>
@@ -182,52 +216,7 @@ export default function Discover() {
                 </div>
                 </div>
             </section>
-            <section className='discover__recently'>
-                <div className='container'>
-                <div className='recently__wrapper '>
-                <div className='recently__top sectoin-top'>
-                     <h3 className='recently__title section-title1'> Featured Albums</h3>
-                     <h6 className='recently__title section-titile2'>View More</h6>
-                </div>
-                <div className='recently__musics section-data  center'>
-                <Swiper navigation={true} modules={[Navigation]} className='mySwiper'    spaceBetween={50}  slidesPerView={5}
-                 breakpoints={{
-                  1700: {
-                    slidesPerView: 5,
-                  },
-                  1400: {
-                    slidesPerView: 4,
-                  },
-                  1200: {
-                    slidesPerView: 3,
-                  },
-                  992: {
-                    slidesPerView: 3,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  576: {
-                    slidesPerView: 1,
-                  },
-                  350: {
-                    slidesPerView: 1,
-                  },
-                  240: {
-                    slidesPerView: 1,
-                  },
-                }}
-                >
-              {musicList.map((music) => (
-            <SwiperSlide key={music.Id}>
-            <Music musics={music} />
-            </SwiperSlide>
-            ))}
-            </Swiper> 
-                </div>
-                </div>
-                </div>
-            </section>
+         
             <section className='discover__category'>
               <div className='container'>
                   <div className='recently__wrapper '>
@@ -307,6 +296,7 @@ export default function Discover() {
               </div>
             </section>
         </div>  
+        <Footer></Footer>
          { <MusicPlayer/> } 
         
 
